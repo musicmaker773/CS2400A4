@@ -1,1 +1,7 @@
-# CS2400A4
+# CS2400 A4
+This assignment required me to make an airport simulator that mostly relied on queues. This assignment itself was somewhat difficult at the time to implement because of our small knowledge and experience of programming. Then again, Data Structures and Algorithms was not an easy class to begin with, but it wasn't the hardest for me personally.
+
+Anyways, the way how this simulator works is that there is a specific units of time running through the simulator, and in every unit of time, there is something that happens. There's a priority landing queue for planes that want to land and an airplane take-off queue that helps planes take off in the air. The whole point is to make airplane that wanna land land without running out of gas, meanwhile, taking into account for the airplanes that wanna take off. The priority queue also takes into account of gas for each plane in the air. The airplane in the front of the queue should have the lowest amount of gas, while the airplane in the back should have more than any other plane in front of it.
+It starts out checking what number it produces in the random number generator. If it produces a 1, an airplane is created to land on the runway. It takes about 2 units of time for an airplane to land.
+If the rng produces a 2, an airplane is ready for takeoff.
+There are mulitple conditions that I won't explain in detail, but basically, it checks if the priority queue is empty or if it isn't, and checks if none of the priority queue planes ran out of gas. If at least one of them did, then the counter for planes crashing will go up. The whole point is to make sure that no planes crash.
